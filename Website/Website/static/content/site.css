@@ -1,0 +1,165 @@
+body {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.title {
+    color: white;
+    font-family: 'Times New Roman';
+}
+
+.jumbotron {
+    border-style: solid;
+    border-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: forestgreen;
+}
+
+.list-background {
+    background-color: white;
+}
+
+.front-opacity {
+    opacity: 1;
+}
+
+.background-front {
+    background-color: lightgreen;
+    margin-left: 18%;
+    margin-right: 18%;
+    border-style: dashed;
+    border-color: forestgreen;
+    padding: 2%;
+    font-family: Arial;
+    color: forestgreen;
+}
+
+.menu-color {
+    background-color: lightgreen;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 18%;
+    margin-right: 18%;
+    padding: 0;
+    overflow: hidden;
+    background-color: forestgreen;
+}
+
+li {
+    float: left;
+    border-style: solid;
+    border-left-color: forestgreen;
+    border-right-color: white;
+    border-top-color: forestgreen;
+    border-bottom-color: forestgreen;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: lightgreen;
+        }
+
+
+
+
+
+
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

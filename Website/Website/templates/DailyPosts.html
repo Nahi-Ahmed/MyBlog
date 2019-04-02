@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<script type="text/javascript">
+document.getElementById('add').onclick = function(){
+  var text = document.getElementById('idea').value;
+  var node = document.createElement("li");
+  var textNode = document.createTextNode(text);
+  node.appendChild(textNode);
+  document.getElementById('list').appendChild(node);
+};
+
+</script>
+
+<ul>
+    <li><h2>Day30</h2></li>
+    <li><p>I bought a hat</p></li>
+</ul>
+
+
+{% endblock %}
