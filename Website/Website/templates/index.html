@@ -21,18 +21,18 @@
                     I bought a hat.
                 </p>
                 <p>
-                    <button class="w3-button w3-ripple w3-white">View posts from other days</button>
+                    <button class="w3-button w3-ripple w3-white"><a href="{{ url_for('dailyposts')}}">View posts from other days</a></button>
                 </p>
             </div>
             <div class="col-md-4">
                 <h2>Projects</h2>
                 <p>Python Caulculator</p>
-                <p><button class="w3-button w3-ripple w3-white">Download more here</button></p>
+                <p><button class="w3-button w3-ripple w3-white"><a href="{{ url_for('downloads')}}">Download more here</a></button></p>
             </div>
             <div class="col-md-4">
                 <h2>The sea</h2>
                 <p><img src="http://www.newmainetimes.org/media/img/library/2011/05/24/gray_dawn_75_miles_out_to_sea_1.JPG" style="width:30%;height:30%" /></p>
-                <p><button class="w3-button w3-ripple w3-white">More Photos</button></p>
+                <p><button class="w3-button w3-ripple w3-white"><a href="{{ url_for('photogallery')}}">More Photos</a></button></p>
 
             </div>
         </div>

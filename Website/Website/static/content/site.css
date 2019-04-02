@@ -163,3 +163,10 @@ div.desc {
     display: table;
     clear: both;
 }
+
+.downloads1 {
+    border-style: dashed;
+    border-color: lightgreen;
+    padding-left: 10%;
+    padding-right: 10%;
+}
