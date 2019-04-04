@@ -7,9 +7,14 @@ def calculator():
 
     ## Asks the user for an input in numbers + operator
     operator = input("Would you like to add, subtract, times or divide?: ")
-    if 
     operator = operator.lower()
 
+    if operator == "add" or operator == "subtract" or operator == "times" or operator == "divide":
+        print("")
+    else:
+        print("Wrong operator entered! Try again")
+        calculator()
+        
     number1 = 0
     number2 = 0
 
@@ -24,10 +29,7 @@ def calculator():
         
     
 
-    if operator == "add" or operator == "subtract" or operator == "times" or operator == "divide":
-        print("")
-    else:
-        print("Wrong operator entered! Try again")
+    
     
     ## Some inputs are converted to a string for ease of file appending later
     strnumber2 = str(number2)

@@ -50,12 +50,18 @@ input[type="checkbox"].input-validation-error {
     border-style: solid;
     border-color: white;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
     font-size: 21px;
     font-weight: 200;
     line-height: 2.1428571435;
     color: inherit;
     background-color: forestgreen;
+}
+
+marquee {
+    font-family: Arial;
+    color: forestgreen;
+    font-size: 30px;
 }
 
 .list-background {
@@ -75,13 +81,14 @@ input[type="checkbox"].input-validation-error {
     padding: 2%;
     font-family: Arial;
     color: forestgreen;
+    margin-bottom: 1%;
 }
 
 .menu-color {
     background-color: lightgreen;
 }
 
-ul {
+.layout-list {
     list-style-type: none;
     margin-left: 18%;
     margin-right: 18%;
@@ -90,7 +97,7 @@ ul {
     background-color: forestgreen;
 }
 
-li {
+.layout-li-list {
     float: left;
     border-style: solid;
     border-left-color: forestgreen;
@@ -99,7 +106,7 @@ li {
     border-bottom-color: forestgreen;
 }
 
-    li a {
+   .layout-li-list .a-list {
         display: block;
         color: white;
         text-align: center;
@@ -107,9 +114,9 @@ li {
         text-decoration: none;
     }
 
-        li a:hover {
-            background-color: lightgreen;
-        }
+.layout-li-list .a-list:hover {
+        background-color: lightgreen;
+   }
 
 
 
@@ -118,11 +125,12 @@ li {
 
 
 div.gallery {
-    border: 1px solid #ccc;
+    border: 4px solid ;
+    border-color: forestgreen;
 }
 
     div.gallery:hover {
-        border: 1px solid #777;
+        border: 4px dashed #777;
     }
 
     div.gallery img {
@@ -140,7 +148,7 @@ div.desc {
 }
 
 .responsive {
-    padding: 0 6px;
+    padding: 2%;
     float: left;
     width: 24.99999%;
 }
@@ -169,4 +177,112 @@ div.desc {
     border-color: lightgreen;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+
+
+
+.intLink {
+    cursor: pointer;
+}
+img.intLink {
+    border: 0;
+}
+
+
+#textBox {
+    width: 540px;
+    height: 200px;
+    border: 8px solid;
+    padding: 12px;
+    margin-left: 25%;
+    margin-right: 40%;
+    overflow: auto;
+    align-content: center;
+    text-align: center;
+    border-color: forestgreen
+}
+
+#textBox2 {
+    width: 540px;
+    height: 60px;
+    border: 8px solid;
+    padding: 12px;
+    margin-left: 25%;
+    margin-right: 40%;
+    overflow: auto;
+    align-content: center;
+    text-align: center;
+    border-color: forestgreen;
+    margin-bottom: 1%;
+
+}
+
+
+#textBox:hover{
+    border-style: dashed;
+}
+
+#textBox2:hover {
+    border-style: dashed;
+}
+
+#textBox #sourceText {
+    padding: 0;
+    margin: 0;
+    min-width: 498px;
+    min-height: 200px;
+}
+
+#editMode label {
+    cursor: pointer;
+}
+
+.sendbutton {
+    margin-top: 1%;
+    text-align: center;
+}
+
+.posts {
+    background-color: lightgreen;
+    text-align: center;
+    border-style: dashed;
+    border-color: forestgreen;
+    padding-bottom: 1%;
+    font-family: Arial;
+    color: forestgreen;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 1%;
+}
+
+.downloadslinks {
+    background-color: lightgreen;
+    text-align: center;
+    border-style: dashed;
+    border-color: forestgreen;
+    padding-bottom: 1%;
+    font-family: Arial;
+    color: forestgreen;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 1%;
+}
+
+.footer-index {
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.contact-page {
+    background-color: lightgreen;
+    text-align: center;
+    border-style: dashed;
+    border-color: forestgreen;
+    padding-bottom: 1%;
+    font-family: Arial;
+    color: forestgreen;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 1%;
 }

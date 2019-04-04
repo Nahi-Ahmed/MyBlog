@@ -6,3 +6,5 @@ from flask import Flask
 app = Flask(__name__)
 
 import Website.views
+import Website.api
+

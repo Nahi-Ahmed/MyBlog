@@ -12,11 +12,13 @@
 
 <body>
 
-    <ul>
-        <li><a href="{{ url_for('home')}}">Home</a></li>
-        <li><a href="{{ url_for('dailyposts')}}">Daily Posts</a></li>
-        <li><a href="{{ url_for('downloads')}}">Downloads</a></li>
-        <li><a href="{{ url_for('photogallery')}}">Photo Gallery</a></li>
+    <ul class="layout-list">
+        <li class="layout-li-list"><a class="a-list" href="{{ url_for('home')}}">Home</a></li>
+        <li class="layout-li-list"><a class="a-list" href="{{ url_for('dailyposts')}}">Daily Posts</a></li>
+        <li class="layout-li-list"><a class="a-list" href="{{ url_for('downloads')}}">Downloads</a></li>
+        <li class="layout-li-list"><a class="a-list" href="{{ url_for('photogallery')}}">Photo Gallery</a></li>
+        <li class="layout-li-list"><a class="a-list" href="{{ url_for('contact')}}">Contact Us</a></li>
+
     </ul>
 
 
@@ -28,10 +30,10 @@
             <p>&copy; {{ year }} - Nahi Ahmed's Blog</p>
         </footer>
     </div>
-
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
+    <script src="/static/scripts/Main.js"></script>
     {% block scripts %}{% endblock %}
 
 </body>

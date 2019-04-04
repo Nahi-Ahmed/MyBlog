@@ -5,21 +5,36 @@
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 
-<script type="text/javascript">
-document.getElementById('add').onclick = function(){
-  var text = document.getElementById('idea').value;
-  var node = document.createElement("li");
-  var textNode = document.createTextNode(text);
-  node.appendChild(textNode);
-  document.getElementById('list').appendChild(node);
-};
+    <div class="posts">
+        <h2>1/4/2019</h2>
+        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    </div>
+    
+    <div class="posts">
+        <h2>{{ date }}</h2>
+        <p>{{ content }}</p>
+    </div>
 
-</script>
 
-<ul>
-    <li><h2>Day30</h2></li>
-    <li><p>I bought a hat</p></li>
-</ul>
+
+
+
+<h2 style="text-align: center; margin-bottom: 1%; color: forestgreen;">Add a new post</h2>
+    <form name="compForm" >
+        
+        <div contenteditable="true" id="textBox2">
+        <p id="dateform">{{ day }}/{{ month }}/{{ year }}</p>
+        </div>
+
+        <div contenteditable="true" id="textBox">
+        <p id="contentform">Content ...</p>
+        </div>
+
+        <div class="sendbutton">
+            <p><input id="submitbutton" type="button" class="w3-button w3-ripple w3-green" value="submit"/></p>
+        </div>
+    </form>
+
 
 
 {% endblock %}
