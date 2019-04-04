@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Website\posts.json" />
     <Content Include="Website\static\content\bootstrap.css" />
     <Content Include="Website\static\content\bootstrap.min.css" />
     <Content Include="Website\static\content\site.css" />

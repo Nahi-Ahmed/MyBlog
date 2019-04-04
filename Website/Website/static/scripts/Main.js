@@ -73,7 +73,7 @@ function initevents() {
             }
         };
 
-        request.send(JSON.stringify(payload);
+        request.send(JSON.stringify(payload));
 
 
     });
