@@ -1,12 +1,13 @@
 
 from datetime import datetime
 import json
-from flask import render_template, request
+from flask import render_template, request, jsonify
 from Website import app
 import os
 import sys
 import re
 import linecache
+
 
 
 
@@ -16,13 +17,8 @@ def create():
     payload = request.data
     datastore = json.loads(payload)
     print(datastore)
- 
-    with open("website/templates/posts.json", "ab+") as f:
-            f.seek(-1, os.SEEK_END)
-            f.truncate()
 
-
-    with open("website/templates/posts.json", "a+") as f:
+    with open("website/templates/posts.txt", "a+") as f:
             f.write("\n")
             json_string = json.dump(datastore, f)
             json_string = str(json_string)
@@ -31,15 +27,22 @@ def create():
             print(json_string)
             f.write(json_string)
 
-    with open("website/templates/posts.json", "ab+") as f:
-            f.seek(-1, os.SEEK_END)
-            f.truncate()
-            countLine = len(f.readlines()) - 1
-            linestring = str(f.readline(countLine))
+@app.route('/')
+@app.route('/dailyposts/get', methods=['GET'])
+def get():
+    with open("website/templates/posts.txt", "r") as f:
+        payloadString = '{'
+        index = 1
+        for line in f:
+            payloadString +=  '"'+str(index)+'": ' + str(line) + ","
+            index = index + 1
+        payloadString + "}"
+    payloadString = payloadString[:-1]
 
-    with open("website/templates/posts.json", "a+") as f:
-            f.write(", \n")
-            f.write("}")
-            data = f.read()
-            data = data.replace("{","")
-            f.write(data)
+    payloadString = payloadString + "}"
+    
+    print(payloadString)
+
+    return jsonify(payloadString)
+
+##payloadString + "}"

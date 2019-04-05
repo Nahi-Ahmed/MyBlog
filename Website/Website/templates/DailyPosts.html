@@ -5,39 +5,42 @@
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 
-<script type="text/javascript" src="../../posts.json"></script>
-
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
     $("#img-holder #img-txt").text(jsonData.text);
 </script>
+
 <script>
-    $(function () {
+    const request = new XMLHttpRequest();
 
-        var posts = [];
-        const posts = JSON.parse('../../../posts.json')
+    request.open("GET", "/dailyposts/get");
 
-
-        $.getJSON('../../../posts.json', function (data) {
-            $.each(data.title, function (i, f) {
-                var tblRow = f.date + f.content;
-                $(tblRow).appendTo("#data p");
-            });
-
-        });
-
-    });
-
+    request.onreadystatechange = (xhr) => {
+        if (xhr.target.readyState === 4 && xhr.target.status == 200) {
+            const t = JSON.parse(xhr.target.responseText);
+            console.log(t);
+           
+        }
+    };
+    console.log("send");
+    request.send();
 </script>
 
-<div id="data" class="posts">
-    <p></p>
+
+<div id="post-container">
+    <div class="posts">
+        <p></p>
+    </div>
+
+    <div class="posts">
+        <h2>1/4/2019</h2>
+        <p>For breakfast I had cereal </p>
+    </div>
 </div>
 
 
-<div class="posts">
-    <h2>1/4/2019</h2>
-    <p>For breakfast I had cereal </p>
-</div>
+
+
+
 
 
 
@@ -68,3 +71,5 @@
 
 
     {% endblock %}
+
+
