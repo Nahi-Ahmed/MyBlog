@@ -5,36 +5,66 @@
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 
-    <div class="posts">
-        <h2>1/4/2019</h2>
-        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-    </div>
-    
-    <div class="posts">
-        <h2>{{ date }}</h2>
-        <p>{{ content }}</p>
-    </div>
+<script type="text/javascript" src="../../posts.json"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+    $("#img-holder #img-txt").text(jsonData.text);
+</script>
+<script>
+    $(function () {
+
+        var posts = [];
+        const posts = JSON.parse('../../../posts.json')
+
+
+        $.getJSON('../../../posts.json', function (data) {
+            $.each(data.title, function (i, f) {
+                var tblRow = f.date + f.content;
+                $(tblRow).appendTo("#data p");
+            });
+
+        });
+
+    });
+
+</script>
+
+<div id="data" class="posts">
+    <p></p>
+</div>
+
+
+<div class="posts">
+    <h2>1/4/2019</h2>
+    <p>For breakfast I had cereal </p>
+</div>
+
+
 
 
 
 
 
 <h2 style="text-align: center; margin-bottom: 1%; color: forestgreen;">Add a new post</h2>
-    <form name="compForm" >
-        
-        <div contenteditable="true" id="textBox2">
+<form name="compForm">
+
+    <div contenteditable="true" id="textBox2">
+        <p id="titleform">Title</p>
+    </div>
+
+    <div contenteditable="true" id="textBox2">
         <p id="dateform">{{ day }}/{{ month }}/{{ year }}</p>
-        </div>
+    </div>
 
-        <div contenteditable="true" id="textBox">
+    <div contenteditable="true" id="textBox">
         <p id="contentform">Content ...</p>
-        </div>
+    </div>
 
-        <div class="sendbutton">
-            <p><input id="submitbutton" type="button" class="w3-button w3-ripple w3-green" value="submit"/></p>
-        </div>
-    </form>
+    <div class="sendbutton">
+        <p><input id="submitbutton" type="button" class="w3-button w3-ripple w3-green" value="submit" /></p>
+    </div>
+</form>
 
 
 
-{% endblock %}
+    {% endblock %}

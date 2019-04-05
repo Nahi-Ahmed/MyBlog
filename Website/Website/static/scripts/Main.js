@@ -55,9 +55,11 @@ function initevents() {
     const button = document.getElementById("submitbutton");
 
     button.addEventListener("click", function () {
+        const title = document.getElementById("titleform").textContent;
         const date = document.getElementById("dateform").textContent;
         const content = document.getElementById("contentform").textContent;
-        const payload = {date: date, content: content}
+        const payload = {};
+        payload[title] = { date: date, content: content }
 
         const request = new XMLHttpRequest();
 
